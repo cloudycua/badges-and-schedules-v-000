@@ -19,12 +19,6 @@ def assign_rooms(array)
 end
 
 def printer(array)
-  batch_badge_creator(array)
-  assign_rooms(array)
-  counter = 0
-  array.each do |name|
-    puts "#{batch_badge_creator[counter]}"
-    puts "#{assign_rooms[counter]}"
-    counter += 1
-  end
+  batch_badge_creator(array).each { |badges| puts badges }
+  assign_rooms(array).each { |room| puts room }
 end
